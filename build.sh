@@ -9,4 +9,4 @@ done
 
 # Update repo index
 helm repo index dist \
-  --url https://ukube.github.com/charts/dist
+  --url https://ukube.github.io/charts/dist
