@@ -1,5 +1,5 @@
 # charts
-Charts used by uKube
+Charts used by uKube Stack
 
 ## How to use
 
