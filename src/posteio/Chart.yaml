@@ -1,0 +1,4 @@
+apiVersion: v1
+description: Poste.io for Kubernetes
+name: posteio
+version: 0.1.0
