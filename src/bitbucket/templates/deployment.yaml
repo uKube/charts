@@ -44,24 +44,24 @@ spec:
             - name: ssh
               containerPort: 7999
               protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-            failureThreshold: 3
-            initialDelaySeconds: 120
-            periodSeconds: 6
-            successThreshold: 1
-            timeoutSeconds: 5
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
-            failureThreshold: 3
-            initialDelaySeconds: 30
-            periodSeconds: 5
-            successThreshold: 1
-            timeoutSeconds: 3
+          # livenessProbe:
+          #   httpGet:
+          #     path: /
+          #     port: http
+          #   failureThreshold: 3
+          #   initialDelaySeconds: 120
+          #   periodSeconds: 6
+          #   successThreshold: 1
+          #   timeoutSeconds: 5
+          # readinessProbe:
+          #   httpGet:
+          #     path: /
+          #     port: http
+          #   failureThreshold: 3
+          #   initialDelaySeconds: 30
+          #   periodSeconds: 5
+          #   successThreshold: 1
+          #   timeoutSeconds: 3
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
