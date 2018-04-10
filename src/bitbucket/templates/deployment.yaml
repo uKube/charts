@@ -28,6 +28,10 @@ spec:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            {{- with .Values.image.envs }}
+{{ toYaml . | indent 12 }}
+            {{- end }}
           volumeMounts:
           - name: bitbucket-workdir
             mountPath: /var/atlassian/application-data/bitbucket

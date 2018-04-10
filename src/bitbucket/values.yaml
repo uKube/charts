@@ -8,6 +8,7 @@ image:
   repository: atlassian/bitbucket-server
   tag: 5.9.1
   pullPolicy: IfNotPresent
+  envs: []
 
 service:
   type: LoadBalancer
