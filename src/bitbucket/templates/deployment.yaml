@@ -44,6 +44,7 @@ spec:
             - name: ssh
               containerPort: 7999
               protocol: TCP
+          {{- if .Values.image.livenessProbe.enabled }}
           livenessProbe:
             httpGet:
               path: /
@@ -54,6 +55,8 @@ spec:
             periodSeconds: 6
             successThreshold: 1
             timeoutSeconds: 5
+          {{- end }}
+          {{- if .Values.image.readinessProbe.enabled }}
           readinessProbe:
             httpGet:
               path: /
@@ -64,6 +67,7 @@ spec:
             periodSeconds: 5
             successThreshold: 1
             timeoutSeconds: 3
+          {{- end }}
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}

@@ -10,9 +10,11 @@ image:
   pullPolicy: IfNotPresent
   envs: []
   livenessProbe:
+    enabled: true
     port: http
     scheme: HTTP
   readinessProbe:
+    enabled: true
     port: http
     scheme: HTTP
 
