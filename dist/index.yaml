@@ -1,8 +1,20 @@
 apiVersion: v1
 entries:
+  bitbucket:
+  - apiVersion: v1
+    appVersion: 5.9.1
+    created: 2018-04-10T14:26:15.234913761+02:00
+    description: On-premises source code management for Git that's secure, fast, and
+      enterprise grade.
+    digest: 3afe15cf48c6a1b7888bf7b2ad6044d83aaa3f2bdb1fb8a8211785c121663c5f
+    icon: https://ukube.github.io/charts/src/bitbucket/icon.png
+    name: bitbucket
+    urls:
+    - https://ukube.github.io/charts/dist/bitbucket-0.0.1.tgz
+    version: 0.0.1
   posteio:
   - apiVersion: v1
-    created: 2017-11-20T23:24:33.626903628+01:00
+    created: 2018-04-10T14:26:15.235126262+02:00
     description: Poste.io for Kubernetes
     digest: 8677e99ac12345517b6e60808644a463c7e7c3a01e2a2168106eeb6f680d5605
     name: posteio
@@ -11,7 +23,7 @@ entries:
     version: 0.1.0
   webdav:
   - apiVersion: v1
-    created: 2017-11-20T23:24:33.627242797+01:00
+    created: 2018-04-10T14:26:15.235515308+02:00
     description: A WebDAV docker image for Kubernetes
     digest: 5ea0aca052e6266093c7dc6c40f96742c1d360793f203128c619f82949633485
     name: webdav
@@ -19,11 +31,11 @@ entries:
     - https://ukube.github.io/charts/dist/webdav-0.1.1.tgz
     version: 0.1.1
   - apiVersion: v1
-    created: 2017-11-20T23:24:33.627077496+01:00
+    created: 2018-04-10T14:26:15.235279386+02:00
     description: A WebDAV docker image for Kubernetes
     digest: 0b897566176e86dccc9a959296e3f3435d11b76feb850c3d88e095ae784497f5
     name: webdav
     urls:
     - https://ukube.github.io/charts/dist/webdav-0.1.0.tgz
     version: 0.1.0
-generated: 2017-11-20T23:24:33.626579479+01:00
+generated: 2018-04-10T14:26:15.234306711+02:00
