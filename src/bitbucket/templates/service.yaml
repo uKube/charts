@@ -16,8 +16,8 @@ spec:
       targetPort: 7990
     - name: git
       protocol: TCP
-      port: 7999
-      targetPort: {{ .Values.service.sshPort }}
+      port: {{ .Values.service.sshPort }}
+      targetPort: 7999
   selector:
     app: {{ template "bitbucket.name" . }}
     release: {{ .Release.Name }}
