@@ -3,51 +3,29 @@ entries:
   bitbucket:
   - apiVersion: v1
     appVersion: 5.9.1
-    created: 2018-04-10T16:06:25.542946153+02:00
+    created: 2018-04-10T16:13:20.085413207+02:00
     description: On-premises source code management for Git that's secure, fast, and
       enterprise grade.
-    digest: 3f9bc0a6ced5e6b09bdb04f9ec7c4fd5f50c1a6de44f99a0fcce7fcf4c32f31f
+    digest: e7951721f66328aa1715acef349627a90e1f01731d5cdfd219e299d1b06697a8
+    icon: https://ukube.github.io/charts/src/bitbucket/icon.png
+    name: bitbucket
+    urls:
+    - https://ukube.github.io/charts/dist/bitbucket-0.0.5.tgz
+    version: 0.0.5
+  - apiVersion: v1
+    appVersion: 5.9.1
+    created: 2018-04-10T16:13:20.08491082+02:00
+    description: On-premises source code management for Git that's secure, fast, and
+      enterprise grade.
+    digest: 5449e6989f96c774a92c8bef43b035b3ef471e3e2c121b6fd0585bd52d07e0f7
     icon: https://ukube.github.io/charts/src/bitbucket/icon.png
     name: bitbucket
     urls:
     - https://ukube.github.io/charts/dist/bitbucket-0.0.4.tgz
     version: 0.0.4
-  - apiVersion: v1
-    appVersion: 5.9.1
-    created: 2018-04-10T16:06:25.542441565+02:00
-    description: On-premises source code management for Git that's secure, fast, and
-      enterprise grade.
-    digest: 88cf1b2063697ae1742b82d40caef9f6a9e5bb3e7dca44c80cff35950d8bb36b
-    icon: https://ukube.github.io/charts/src/bitbucket/icon.png
-    name: bitbucket
-    urls:
-    - https://ukube.github.io/charts/dist/bitbucket-0.0.3.tgz
-    version: 0.0.3
-  - apiVersion: v1
-    appVersion: 5.9.1
-    created: 2018-04-10T16:06:25.541987442+02:00
-    description: On-premises source code management for Git that's secure, fast, and
-      enterprise grade.
-    digest: a7f1224d43a53d1fa82accfd40cbf00fa2b127220ac50a6ce290379581bc1373
-    icon: https://ukube.github.io/charts/src/bitbucket/icon.png
-    name: bitbucket
-    urls:
-    - https://ukube.github.io/charts/dist/bitbucket-0.0.2.tgz
-    version: 0.0.2
-  - apiVersion: v1
-    appVersion: 5.9.1
-    created: 2018-04-10T16:06:25.541537397+02:00
-    description: On-premises source code management for Git that's secure, fast, and
-      enterprise grade.
-    digest: 3afe15cf48c6a1b7888bf7b2ad6044d83aaa3f2bdb1fb8a8211785c121663c5f
-    icon: https://ukube.github.io/charts/src/bitbucket/icon.png
-    name: bitbucket
-    urls:
-    - https://ukube.github.io/charts/dist/bitbucket-0.0.1.tgz
-    version: 0.0.1
   posteio:
   - apiVersion: v1
-    created: 2018-04-10T16:06:25.543158617+02:00
+    created: 2018-04-10T16:13:20.085650441+02:00
     description: Poste.io for Kubernetes
     digest: 8677e99ac12345517b6e60808644a463c7e7c3a01e2a2168106eeb6f680d5605
     name: posteio
@@ -56,7 +34,7 @@ entries:
     version: 0.1.0
   webdav:
   - apiVersion: v1
-    created: 2018-04-10T16:06:25.543578564+02:00
+    created: 2018-04-10T16:13:20.085974088+02:00
     description: A WebDAV docker image for Kubernetes
     digest: 5ea0aca052e6266093c7dc6c40f96742c1d360793f203128c619f82949633485
     name: webdav
@@ -64,11 +42,11 @@ entries:
     - https://ukube.github.io/charts/dist/webdav-0.1.1.tgz
     version: 0.1.1
   - apiVersion: v1
-    created: 2018-04-10T16:06:25.543409343+02:00
+    created: 2018-04-10T16:13:20.08580561+02:00
     description: A WebDAV docker image for Kubernetes
     digest: 0b897566176e86dccc9a959296e3f3435d11b76feb850c3d88e095ae784497f5
     name: webdav
     urls:
     - https://ukube.github.io/charts/dist/webdav-0.1.0.tgz
     version: 0.1.0
-generated: 2018-04-10T16:06:25.540964059+02:00
+generated: 2018-04-10T16:13:20.084351024+02:00
