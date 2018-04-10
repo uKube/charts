@@ -11,8 +11,10 @@ image:
   envs: []
   livenessProbe:
     port: http
+    scheme: HTTP
   readinessProbe:
     port: http
+    scheme: HTTP
 
 service:
   type: LoadBalancer

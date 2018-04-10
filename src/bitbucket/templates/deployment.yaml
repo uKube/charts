@@ -48,6 +48,7 @@ spec:
             httpGet:
               path: /
               port: {{ .Values.image.livenessProbe.port }}
+              scheme: {{ .Values.image.livenessProbe.scheme }}
             failureThreshold: 3
             initialDelaySeconds: 120
             periodSeconds: 6
@@ -57,6 +58,7 @@ spec:
             httpGet:
               path: /
               port: {{ .Values.image.readinessProbe.port }}
+              scheme: {{ .Values.image.readinessProbe.scheme }}
             failureThreshold: 3
             initialDelaySeconds: 30
             periodSeconds: 5
