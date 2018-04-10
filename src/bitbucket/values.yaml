@@ -9,6 +9,10 @@ image:
   tag: 5.9.1
   pullPolicy: IfNotPresent
   envs: []
+  livenessProbe:
+    port: http
+  readinessProbe:
+    port: http
 
 service:
   type: LoadBalancer
