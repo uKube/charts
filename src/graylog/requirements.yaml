@@ -1,0 +1,7 @@
+dependencies:
+- name: mongodb
+  version: 1.0.2
+  repository: "@stable"
+- name: elasticsearch
+  version: 0.4.9
+  repository: "@incubator"
