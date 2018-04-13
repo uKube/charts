@@ -3,29 +3,40 @@ entries:
   bitbucket:
   - apiVersion: v1
     appVersion: 5.9.1
-    created: 2018-04-10T22:14:17.833828509+02:00
+    created: 2018-04-13T09:17:02.91088908+02:00
     description: On-premises source code management for Git that's secure, fast, and
       enterprise grade.
-    digest: 0269565ed0d9ed6aebfc5bfc3b1f2027f06a804184a7120dea35fb6ade967b5b
+    digest: 7d95986e1f178b01e05e6059c167d3344af89e12e097594ad917801e2fb9c45b
+    icon: https://ukube.github.io/charts/src/bitbucket/icon.png
+    name: bitbucket
+    urls:
+    - https://ukube.github.io/charts/dist/bitbucket-0.1.tgz
+    version: "0.1"
+  - apiVersion: v1
+    appVersion: 5.9.1
+    created: 2018-04-13T09:17:02.910460937+02:00
+    description: On-premises source code management for Git that's secure, fast, and
+      enterprise grade.
+    digest: 3ea2756a8dabecf2e87fa7c99d5cf076d78db9be50017af4ac4c7c98ba5eaa9c
     icon: https://ukube.github.io/charts/src/bitbucket/icon.png
     name: bitbucket
     urls:
     - https://ukube.github.io/charts/dist/bitbucket-0.0.9.tgz
     version: 0.0.9
+  graylog:
   - apiVersion: v1
-    appVersion: 5.9.1
-    created: 2018-04-10T22:14:17.833374995+02:00
-    description: On-premises source code management for Git that's secure, fast, and
-      enterprise grade.
-    digest: 9b007aeef3b6eb7029d1a8aca099c5ddac5fbee15c31fb123f14cd77fb1683b1
-    icon: https://ukube.github.io/charts/src/bitbucket/icon.png
-    name: bitbucket
+    appVersion: 2.4.3
+    created: 2018-04-13T09:17:02.912543089+02:00
+    description: Free and open source log management
+    digest: 1e9b7e6155d019d6fb5e24c77a82ab9aedb58baf521bdd4fa221e4cd6f55d52f
+    icon: https://ukube.github.io/charts/src/graylog/icon.png
+    name: graylog
     urls:
-    - https://ukube.github.io/charts/dist/bitbucket-0.0.8.tgz
-    version: 0.0.8
+    - https://ukube.github.io/charts/dist/graylog-0.0.1.tgz
+    version: 0.0.1
   posteio:
   - apiVersion: v1
-    created: 2018-04-10T22:14:17.834013974+02:00
+    created: 2018-04-13T09:17:02.912752266+02:00
     description: Poste.io for Kubernetes
     digest: 8677e99ac12345517b6e60808644a463c7e7c3a01e2a2168106eeb6f680d5605
     name: posteio
@@ -34,7 +45,7 @@ entries:
     version: 0.1.0
   webdav:
   - apiVersion: v1
-    created: 2018-04-10T22:14:17.834582957+02:00
+    created: 2018-04-13T09:17:02.913232938+02:00
     description: A WebDAV docker image for Kubernetes
     digest: 5ea0aca052e6266093c7dc6c40f96742c1d360793f203128c619f82949633485
     name: webdav
@@ -42,11 +53,11 @@ entries:
     - https://ukube.github.io/charts/dist/webdav-0.1.1.tgz
     version: 0.1.1
   - apiVersion: v1
-    created: 2018-04-10T22:14:17.83416613+02:00
+    created: 2018-04-13T09:17:02.913005359+02:00
     description: A WebDAV docker image for Kubernetes
     digest: 0b897566176e86dccc9a959296e3f3435d11b76feb850c3d88e095ae784497f5
     name: webdav
     urls:
     - https://ukube.github.io/charts/dist/webdav-0.1.0.tgz
     version: 0.1.0
-generated: 2018-04-10T22:14:17.832893963+02:00
+generated: 2018-04-13T09:17:02.909871505+02:00
