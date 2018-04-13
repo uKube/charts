@@ -5,5 +5,5 @@ dependencies:
 - name: elasticsearch
   repository: https://kubernetes-charts-incubator.storage.googleapis.com
   version: 0.4.9
-digest: sha256:1ab92bf1bc6aecba1627881437e2f90408449f03de6684a022fea161af52a113
-generated: 2018-04-13T09:17:01.443138428+02:00
+digest: sha256:28faa1d632e074cf23fa7258123fd316dea807dd4d1626140759262b6dc25242
+generated: 2018-04-13T13:58:46.536759215+02:00
