@@ -8,7 +8,7 @@ image:
   repository: atlassian/bitbucket-server
   tag: 5.9.1
   pullPolicy: IfNotPresent
-  envs: []
+  env: {}
   livenessProbe:
     enabled: true
     port: http
@@ -19,7 +19,7 @@ image:
     scheme: HTTP
 
 service:
-  type: LoadBalancer
+  type: ClusterIP
   httpPort: 80
   sshPort: 7999
 

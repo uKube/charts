@@ -29,8 +29,9 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
-            {{- with .Values.image.envs }}
-{{ toYaml . | indent 12 }}
+            {{- range $key, $value :=  .Values.image.env }}
+            - name: {{ $key }}
+              value: {{ $value | quote }}
             {{- end }}
           volumeMounts:
           - name: bitbucket-workdir
