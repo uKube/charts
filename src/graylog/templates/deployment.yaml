@@ -24,6 +24,8 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
+            - name: GRAYLOG_MONGODB_URI
+              value: "mongodb://{{ template "graylog.fullname" . }}-mongodb/graylog"
             {{- range $key, $value :=  .Values.image.env }}
             - name: {{ $key }}
               value: {{ $value | quote }}
@@ -44,17 +46,6 @@ spec:
             - name: syslog-udp
               containerPort: 514
               protocol: UDP
-        - name: mongo
-          image: mongo:3
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
-        - name: elasticsearch
-          image: docker.elastic.co/elasticsearch/elasticsearch:5.6.6
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
-          env:
-            - name: http.host
-              value: "0.0.0.0"
-            - name: xpack.security.enabled
-              value: "false"
           # livenessProbe:
           #   httpGet:
           #     path: /
