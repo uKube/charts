@@ -3,7 +3,7 @@ entries:
   bitbucket:
   - apiVersion: v1
     appVersion: 5.9.1
-    created: 2018-04-13T16:14:21.496502099+02:00
+    created: 2018-04-13T16:22:21.881684944+02:00
     description: On-premises source code management for Git that's secure, fast, and
       enterprise grade.
     digest: 7d95986e1f178b01e05e6059c167d3344af89e12e097594ad917801e2fb9c45b
@@ -15,9 +15,19 @@ entries:
   graylog:
   - apiVersion: v1
     appVersion: 2.4.3
-    created: 2018-04-13T16:14:21.499508029+02:00
+    created: 2018-04-13T16:22:21.885262594+02:00
     description: Free and open source log management
-    digest: d0da4af097f67a2efed94de7fb4a3a9fa5519829b5eff8b81c8f3ebd5df95fe6
+    digest: 48f692b0fb07b504cdf74e43d12fa6b08b1ba424a5d0b6f324db10f6fe9e30ce
+    icon: https://ukube.github.io/charts/src/graylog/icon.png
+    name: graylog
+    urls:
+    - https://ukube.github.io/charts/dist/graylog-0.0.3.tgz
+    version: 0.0.3
+  - apiVersion: v1
+    appVersion: 2.4.3
+    created: 2018-04-13T16:22:21.884320426+02:00
+    description: Free and open source log management
+    digest: 91bc8c9326e86c53e079db7f63ecf0b52b6f3fe357917dae044edbfc4bd1d98d
     icon: https://ukube.github.io/charts/src/graylog/icon.png
     name: graylog
     urls:
@@ -25,9 +35,9 @@ entries:
     version: 0.0.2
   - apiVersion: v1
     appVersion: 2.4.3
-    created: 2018-04-13T16:14:21.498061267+02:00
+    created: 2018-04-13T16:22:21.88335588+02:00
     description: Free and open source log management
-    digest: 120895dced5fe035d429a29012b5eba93b1c1c5ab79948009791f9ed6f32fb6b
+    digest: 9d628fb0c1950314cabb95df8435b922297d8c6851c15c212cf5f336be88e797
     icon: https://ukube.github.io/charts/src/graylog/icon.png
     name: graylog
     urls:
@@ -35,7 +45,7 @@ entries:
     version: 0.0.1
   posteio:
   - apiVersion: v1
-    created: 2018-04-13T16:14:21.499766941+02:00
+    created: 2018-04-13T16:22:21.885467844+02:00
     description: Poste.io for Kubernetes
     digest: 8677e99ac12345517b6e60808644a463c7e7c3a01e2a2168106eeb6f680d5605
     name: posteio
@@ -44,7 +54,7 @@ entries:
     version: 0.1.0
   webdav:
   - apiVersion: v1
-    created: 2018-04-13T16:14:21.500139556+02:00
+    created: 2018-04-13T16:22:21.88591909+02:00
     description: A WebDAV docker image for Kubernetes
     digest: 5ea0aca052e6266093c7dc6c40f96742c1d360793f203128c619f82949633485
     name: webdav
@@ -52,11 +62,11 @@ entries:
     - https://ukube.github.io/charts/dist/webdav-0.1.1.tgz
     version: 0.1.1
   - apiVersion: v1
-    created: 2018-04-13T16:14:21.49996813+02:00
+    created: 2018-04-13T16:22:21.885650774+02:00
     description: A WebDAV docker image for Kubernetes
     digest: 0b897566176e86dccc9a959296e3f3435d11b76feb850c3d88e095ae784497f5
     name: webdav
     urls:
     - https://ukube.github.io/charts/dist/webdav-0.1.0.tgz
     version: 0.1.0
-generated: 2018-04-13T16:14:21.495937928+02:00
+generated: 2018-04-13T16:22:21.88119793+02:00
