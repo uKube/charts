@@ -21,7 +21,6 @@ image:
 service:
   type: ClusterIP
   httpPort: 80
-  sshPort: 7999
 
 ingress:
   enabled: false

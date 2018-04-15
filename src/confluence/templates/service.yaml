@@ -13,11 +13,7 @@ spec:
     - name: http
       protocol: TCP
       port: {{ .Values.service.httpPort }}
-      targetPort: 7990
-    - name: git
-      protocol: TCP
-      port: {{ .Values.service.sshPort }}
-      targetPort: 7999
+      targetPort: 8090
   selector:
     app: {{ template "confluence.name" . }}
     release: {{ .Release.Name }}

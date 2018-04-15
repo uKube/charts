@@ -40,10 +40,7 @@ spec:
             mountPath: /opt/atlassian/confluence/logs
           ports:
             - name: http
-              containerPort: 7990
-              protocol: TCP
-            - name: ssh
-              containerPort: 7999
+              containerPort: 8090
               protocol: TCP
           {{- if .Values.image.livenessProbe.enabled }}
           livenessProbe:
