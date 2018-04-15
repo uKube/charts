@@ -3,7 +3,7 @@ entries:
   bitbucket:
   - apiVersion: v1
     appVersion: 5.9.1
-    created: 2018-04-15T17:52:56.534114582+02:00
+    created: 2018-04-15T18:00:24.849373693+02:00
     description: On-premises source code management for Git that's secure, fast, and
       enterprise grade.
     digest: 3c9275bf0120dcd9e292a4da38abf1dc6cc1b9ade64ad26ab4e3d9965fc09b88
@@ -14,7 +14,7 @@ entries:
     version: "0.2"
   - apiVersion: v1
     appVersion: 5.9.1
-    created: 2018-04-15T17:52:56.533054173+02:00
+    created: 2018-04-15T18:00:24.848314193+02:00
     description: On-premises source code management for Git that's secure, fast, and
       enterprise grade.
     digest: 7d95986e1f178b01e05e6059c167d3344af89e12e097594ad917801e2fb9c45b
@@ -26,7 +26,18 @@ entries:
   confluence:
   - apiVersion: v1
     appVersion: 6.8.1
-    created: 2018-04-15T17:52:56.535166369+02:00
+    created: 2018-04-15T18:00:24.85148467+02:00
+    description: Confluence is content collaboration software that changes how modern
+      teams work
+    digest: cf91827bcc3d74b240146f54f6b38b6d219f2d88f39d8f09b288f1e47d5efa0f
+    icon: https://ukube.github.io/charts/src/confluence/icon.png
+    name: confluence
+    urls:
+    - https://ukube.github.io/charts/dist/confluence-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v1
+    appVersion: 6.8.1
+    created: 2018-04-15T18:00:24.850438305+02:00
     description: Confluence is content collaboration software that changes how modern
       teams work
     digest: 1dd6b26ed1ebe49e169c05313baa81c505be4359a16c9e4163f525df33c1ef11
@@ -38,9 +49,9 @@ entries:
   graylog:
   - apiVersion: v1
     appVersion: 2.4.3
-    created: 2018-04-15T17:52:56.544877715+02:00
+    created: 2018-04-15T18:00:24.858157518+02:00
     description: Free and open source log management
-    digest: f294a8bb44d5d6a2a5a22b4891f9068912af3fa0cecff60c11e64fbb21bf8288
+    digest: b5178a6bdd123111283f3e39fa7d1532ce3e0b8e95ac4e8758e9e42f2c3065ec
     icon: https://ukube.github.io/charts/src/graylog/icon.png
     name: graylog
     urls:
@@ -48,7 +59,7 @@ entries:
     version: "0.1"
   - apiVersion: v1
     appVersion: 2.4.3
-    created: 2018-04-15T17:52:56.538801122+02:00
+    created: 2018-04-15T18:00:24.854861855+02:00
     description: Free and open source log management
     digest: 11461b8752b4bd2f2ecbc3ad8452ebd0a6c1a78186364a222d233d17780a63fa
     icon: https://ukube.github.io/charts/src/graylog/icon.png
@@ -56,9 +67,21 @@ entries:
     urls:
     - https://ukube.github.io/charts/dist/graylog-0.0.4.tgz
     version: 0.0.4
+  jira:
+  - apiVersion: v1
+    appVersion: 7.9.0
+    created: 2018-04-15T18:00:24.859112359+02:00
+    description: Jira Software is built for every member of your software team to
+      plan, track, and release great software.
+    digest: c6b90dfa8ba1f5186d4b2f22ad3ab4b11efcac262c76af9235534cbe256b00b1
+    icon: https://ukube.github.io/charts/src/jira/icon.png
+    name: jira
+    urls:
+    - https://ukube.github.io/charts/dist/jira-0.0.1.tgz
+    version: 0.0.1
   posteio:
   - apiVersion: v1
-    created: 2018-04-15T17:52:56.545581373+02:00
+    created: 2018-04-15T18:00:24.859509737+02:00
     description: Poste.io for Kubernetes
     digest: 8677e99ac12345517b6e60808644a463c7e7c3a01e2a2168106eeb6f680d5605
     name: posteio
@@ -67,11 +90,11 @@ entries:
     version: 0.1.0
   webdav:
   - apiVersion: v1
-    created: 2018-04-15T17:52:56.546204378+02:00
+    created: 2018-04-15T18:00:24.859898291+02:00
     description: A WebDAV docker image for Kubernetes
     digest: 5ea0aca052e6266093c7dc6c40f96742c1d360793f203128c619f82949633485
     name: webdav
     urls:
     - https://ukube.github.io/charts/dist/webdav-0.1.1.tgz
     version: 0.1.1
-generated: 2018-04-15T17:52:56.531804587+02:00
+generated: 2018-04-15T18:00:24.847103255+02:00
