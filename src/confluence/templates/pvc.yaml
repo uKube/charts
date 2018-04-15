@@ -1,0 +1,52 @@
+# confluence-data
+{{- if .Values.persistence.data.enabled -}}
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: {{ template "confluence.fullname" . }}-data
+  labels:
+    app: {{ template "confluence.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+spec:
+  accessModes:
+    - {{ .Values.persistence.data.accessMode | quote }}
+  resources:
+    requests:
+      storage: {{ .Values.persistence.data.size | quote }}
+{{- if .Values.persistence.data.storageClass }}
+{{- if (eq "-" .Values.persistence.data.storageClass) }}
+  storageClassName: ""
+{{- else }}
+  storageClassName: "{{ .Values.persistence.data.storageClass }}"
+{{- end }}
+{{- end }}
+{{- end -}}
+
+---
+# confluence-logs
+{{- if .Values.persistence.logs.enabled -}}
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: {{ template "confluence.fullname" . }}-logs
+  labels:
+    app: {{ template "confluence.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+spec:
+  accessModes:
+    - {{ .Values.persistence.logs.accessMode | quote }}
+  resources:
+    requests:
+      storage: {{ .Values.persistence.logs.size | quote }}
+{{- if .Values.persistence.logs.storageClass }}
+{{- if (eq "-" .Values.persistence.logs.storageClass) }}
+  storageClassName: ""
+{{- else }}
+  storageClassName: "{{ .Values.persistence.logs.storageClass }}"
+{{- end }}
+{{- end }}
+{{- end -}}

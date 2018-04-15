@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "confluence.fullname" . }}
+  labels:
+    app: {{ template "confluence.name" . }}
+    chart: {{ template "confluence.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - name: http
+      protocol: TCP
+      port: {{ .Values.service.httpPort }}
+      targetPort: 7990
+    - name: git
+      protocol: TCP
+      port: {{ .Values.service.sshPort }}
+      targetPort: 7999
+  selector:
+    app: {{ template "confluence.name" . }}
+    release: {{ .Release.Name }}

@@ -1,0 +1,100 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: {{ template "confluence.fullname" . }}
+  labels:
+    app: {{ template "confluence.name" . }}
+    chart: {{ template "confluence.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "confluence.name" . }}
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "confluence.name" . }}
+        release: {{ .Release.Name }}
+    spec:
+      volumes:
+        - name: confluence-workdir
+          emptyDir: {}
+        - name: confluence-logs
+          emptyDir: {}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            {{- range $key, $value :=  .Values.image.env }}
+            - name: {{ $key }}
+              value: {{ $value | quote }}
+            {{- end }}
+          volumeMounts:
+          - name: confluence-data
+            mountPath: /var/atlassian/application-data/confluence
+          - name: confluence-logs
+            mountPath: /opt/atlassian/confluence/logs
+          ports:
+            - name: http
+              containerPort: 7990
+              protocol: TCP
+            - name: ssh
+              containerPort: 7999
+              protocol: TCP
+          {{- if .Values.image.livenessProbe.enabled }}
+          livenessProbe:
+            httpGet:
+              path: /
+              port: {{ .Values.image.livenessProbe.port }}
+              scheme: {{ .Values.image.livenessProbe.scheme }}
+            failureThreshold: 3
+            initialDelaySeconds: 120
+            periodSeconds: 6
+            successThreshold: 1
+            timeoutSeconds: 5
+          {{- end }}
+          {{- if .Values.image.readinessProbe.enabled }}
+          readinessProbe:
+            httpGet:
+              path: /
+              port: {{ .Values.image.readinessProbe.port }}
+              scheme: {{ .Values.image.readinessProbe.scheme }}
+            failureThreshold: 3
+            initialDelaySeconds: 30
+            periodSeconds: 5
+            successThreshold: 1
+            timeoutSeconds: 3
+          {{- end }}
+          resources:
+      volumes:
+      - name: confluence-data
+      {{- if .Values.persistence.data.enabled }}
+        persistentVolumeClaim:
+          claimName: {{ template "confluence.fullname" . }}-data
+      {{- else }}
+        emptyDir: {}
+      {{ end }}
+      - name: confluence-logs
+      {{- if .Values.persistence.logs.enabled }}
+        persistentVolumeClaim:
+          claimName: {{ template "confluence.fullname" . }}-logs
+      {{- else }}
+        emptyDir: {}
+      {{ end }}
+{{ toYaml .Values.resources | indent 12 }}
+    {{- with .Values.nodeSelector }}
+      nodeSelector:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+{{ toYaml . | indent 8 }}
+    {{- end }}
