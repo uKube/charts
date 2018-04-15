@@ -47,3 +47,18 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+## Enable persistence using Persistent Volume Claims
+## ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
+##
+persistence:
+  data:
+    enabled: true
+    # storageClass: "-"
+    accessMode: ReadWriteOnce
+    size: 10Gi
+  logs:
+    enabled: true
+    # storageClass: "-"
+    accessMode: ReadWriteOnce
+    size: 10Gi

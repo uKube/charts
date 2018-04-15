@@ -34,7 +34,7 @@ spec:
               value: {{ $value | quote }}
             {{- end }}
           volumeMounts:
-          - name: bitbucket-workdir
+          - name: bitbucket-data
             mountPath: /var/atlassian/application-data/bitbucket
           - name: bitbucket-logs
             mountPath: /opt/atlassian/bitbucket/logs
@@ -70,6 +70,21 @@ spec:
             timeoutSeconds: 3
           {{- end }}
           resources:
+      volumes:
+      - name: bitbucket-data
+      {{- if .Values.persistence.data.enabled }}
+        persistentVolumeClaim:
+          claimName: {{ template "bitbucket.fullname" . }}-data
+      {{- else }}
+        emptyDir: {}
+      {{ end }}
+      - name: bitbucket-logs
+      {{- if .Values.persistence.logs.enabled }}
+        persistentVolumeClaim:
+          claimName: {{ template "bitbucket.fullname" . }}-logs
+      {{- else }}
+        emptyDir: {}
+      {{ end }}
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
       nodeSelector:
