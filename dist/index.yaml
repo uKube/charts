@@ -3,7 +3,7 @@ entries:
   bitbucket:
   - apiVersion: v1
     appVersion: 5.9.1
-    created: 2018-04-15T17:37:36.529451986+02:00
+    created: 2018-04-15T17:47:02.447043844+02:00
     description: On-premises source code management for Git that's secure, fast, and
       enterprise grade.
     digest: 3c9275bf0120dcd9e292a4da38abf1dc6cc1b9ade64ad26ab4e3d9965fc09b88
@@ -14,7 +14,7 @@ entries:
     version: "0.2"
   - apiVersion: v1
     appVersion: 5.9.1
-    created: 2018-04-15T17:37:36.527627083+02:00
+    created: 2018-04-15T17:47:02.445989034+02:00
     description: On-premises source code management for Git that's secure, fast, and
       enterprise grade.
     digest: 7d95986e1f178b01e05e6059c167d3344af89e12e097594ad917801e2fb9c45b
@@ -26,7 +26,17 @@ entries:
   graylog:
   - apiVersion: v1
     appVersion: 2.4.3
-    created: 2018-04-15T17:37:36.535696469+02:00
+    created: 2018-04-15T17:47:02.454543339+02:00
+    description: Free and open source log management
+    digest: 3de9d4511a6a7f0ef8d862b8a05c81ea87fe1dc8d92ee0670d55db1b7ca832fa
+    icon: https://ukube.github.io/charts/src/graylog/icon.png
+    name: graylog
+    urls:
+    - https://ukube.github.io/charts/dist/graylog-0.1.tgz
+    version: "0.1"
+  - apiVersion: v1
+    appVersion: 2.4.3
+    created: 2018-04-15T17:47:02.450672086+02:00
     description: Free and open source log management
     digest: ec2579d88685f38bf8e8a9a53a26d14fd4df6224bdda2f04a6c3295b0629ef74
     icon: https://ukube.github.io/charts/src/graylog/icon.png
@@ -36,7 +46,7 @@ entries:
     version: 0.0.4
   posteio:
   - apiVersion: v1
-    created: 2018-04-15T17:37:36.53643251+02:00
+    created: 2018-04-15T17:47:02.455075529+02:00
     description: Poste.io for Kubernetes
     digest: 8677e99ac12345517b6e60808644a463c7e7c3a01e2a2168106eeb6f680d5605
     name: posteio
@@ -45,11 +55,11 @@ entries:
     version: 0.1.0
   webdav:
   - apiVersion: v1
-    created: 2018-04-15T17:37:36.537085868+02:00
+    created: 2018-04-15T17:47:02.455449513+02:00
     description: A WebDAV docker image for Kubernetes
     digest: 5ea0aca052e6266093c7dc6c40f96742c1d360793f203128c619f82949633485
     name: webdav
     urls:
     - https://ukube.github.io/charts/dist/webdav-0.1.1.tgz
     version: 0.1.1
-generated: 2018-04-15T17:37:36.525715383+02:00
+generated: 2018-04-15T17:47:02.444833833+02:00

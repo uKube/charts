@@ -30,6 +30,11 @@ spec:
             - name: {{ $key }}
               value: {{ $value | quote }}
             {{- end }}
+          volumeMounts:
+          - name: graylog-data
+            mountPath: /usr/share/graylog/data/config
+          - name: graylog-logs
+            mountPath: /usr/share/graylog/data/journal
           ports:
             - name: http
               containerPort: 9000
@@ -55,6 +60,21 @@ spec:
           #     path: /
           #     port: http
           resources:
+      volumes:
+      - name: graylog-data
+      {{- if .Values.persistence.data.enabled }}
+        persistentVolumeClaim:
+          claimName: {{ template "graylog.fullname" . }}-data
+      {{- else }}
+        emptyDir: {}
+      {{ end }}
+      - name: graylog-logs
+      {{- if .Values.persistence.logs.enabled }}
+        persistentVolumeClaim:
+          claimName: {{ template "graylog.fullname" . }}-logs
+      {{- else }}
+        emptyDir: {}
+      {{ end }}
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
       nodeSelector:
